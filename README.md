@@ -32,7 +32,5 @@
 ### 🏠 Ana Sayfa
 <img src="gif/1.gif" width="600"/>
 
-### 🛠️ Admin Panel
-<img src="gif/2.gif" width="600"/>
 
 
