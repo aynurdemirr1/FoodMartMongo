@@ -29,11 +29,9 @@
 
 ## 🎬 Uygulama Demoları
 
-### Ana Sayfa
-![Ana Sayfa](gif/1.gif)
+### 🏠 Ana Sayfa
+<img src="gif/1.gif" width="600"/>
 
-### Admin Panel
-![Admin Panel](gif/2.gif)
-
-
+### 🛠️ Admin Panel
+<img src="gif/2.gif" width="600"/>
 
