@@ -27,7 +27,13 @@
 
 🔐 Session Management
 
+## 🎬 Uygulama Demoları
 
+### Ana Sayfa
+![Ana Sayfa](gif/1.gif)
+
+### Admin Panel
+![Admin Panel](gif/2.gif)
 
 
 
