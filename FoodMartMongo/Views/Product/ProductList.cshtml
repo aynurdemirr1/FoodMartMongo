@@ -1,0 +1,49 @@
+﻿@model List<FoodMartMongo.Dtos.ProductDtos.ResultProductWithCategoryDto>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="card">
+        <h5 class="card-header">Ürün Listesi</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Ürün Adı</th>
+                        <th>Ürün Stok</th>
+                        <th>Ürün Fiyatı</th>
+                        <th>Ürün Kategorisi</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ProductId</td>
+                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@item.Name</strong></td>
+                            <td>@item.StockCount</td>
+                            <td>@item.Price</td>
+                            <td>@item.Category.CategoryName</td>
+
+                            <td>
+                                <a class="btn btn-outline-success" href="/Product/UpdateProduct/@item.ProductId"><i class="bx bx-edit-alt me-1"></i> Güncelle</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-danger" href="/Product/DeleteProduct/@item.ProductId"><i class="bx bx-trash me-1"></i> Sil</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <br />
+    <a href="/Product/CreateProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+</div>

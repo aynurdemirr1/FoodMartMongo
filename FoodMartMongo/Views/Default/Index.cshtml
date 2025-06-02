@@ -1,0 +1,52 @@
+﻿﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadComponentPartial")
+<body>
+
+    @await Component.InvokeAsync("_SvgComponentPartial")
+
+    @await Component.InvokeAsync("_NavbarComponentPartial")
+
+    <section class="py-3" style="background-image: url('/FoodMart-1.0.0/images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="banner-blocks">
+
+                        @await Component.InvokeAsync("_SliderComponentPartial")
+
+                        @await Component.InvokeAsync("_TopDiscountComponentPartial")
+
+                    </div>
+                    <!-- / Banner Blocks -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @await Component.InvokeAsync("_CategoryComponentPartial")
+
+    @await Component.InvokeAsync("_ProductsComponentPartial")
+
+    @await Component.InvokeAsync("_SubDiscountComponentPartial")
+
+    @await Component.InvokeAsync("_LowestPricedProducts")
+
+    @await Component.InvokeAsync("_SendMailComponentPartial")
+
+    @await Component.InvokeAsync("_PromoBannerComponentPartial")
+
+    @await Component.InvokeAsync("_PeopleAreViewingComponentPartial")
+
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
+    @await Component.InvokeAsync("_ScriptsComponentPartial")
+</body>
+</html>

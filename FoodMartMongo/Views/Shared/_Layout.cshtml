@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - Purple Admin</title>
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/vendor/mdi/css/materialdesignicons.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/vendor/ti-icons/css/themify-icons.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/vendor/font-awesome/css/font-awesome.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/vendor/css/vendor.bundle.base.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css")" />
+
+    <!-- main style -->
+    <link rel="stylesheet" href="@Url.Content("~/purple-admin/assets/css/style.css")" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="@Url.Content("~/purple-admin/assets/images/favicon.png")" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- Navbar -->
+        @* Partial olarak eklenebilir *@
+
+        <!-- Sayfa gövdesi -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- Sidebar -->
+            @* Partial olarak eklenebilir *@
+
+            <!-- Main içerik -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+                            Copyright © @DateTime.Now.Year
+                            <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
+                            All rights reserved.
+                        </span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                            Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="@Url.Content("~/purple-admin/assets/vendor/js/vendor.bundle.base.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/vendor/chart.js/chart.umd.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/off-canvas.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/misc.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/settings.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/todolist.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/jquery.cookie.js")"></script>
+    <script src="@Url.Content("~/purple-admin/assets/js/dashboard.js")"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

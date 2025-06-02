@@ -1,0 +1,53 @@
+﻿@model FoodMartMongo.Models.MailRequest
+@if (TempData["Success"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '@Html.Raw(TempData["Success"])',
+
+            showConfirmButton: true
+
+        });
+    </script>
+}
+<section id="getdiscount" class="py-5">
+    <div class="container-fluid">
+
+        <div class="bg-secondary py-5 my-5 rounded-5" style="background: url('/FoodMart-1.0.0/images/bg-leaves-img-pattern.png') no-repeat;">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 p-5">
+                        <div class="section-header">
+                            <h2 class="section-title display-4">Şimdi alışverişe başlayın, ilk siparişinizde <span class="text-primary">%25 indirim</span>kazanın!</h2>
+                        </div>
+                        <p>
+                            FoodMart'da avantajlarla dolu alışverişin keyfini çıkarın.
+                            E-posta adresinizi girerek kampanyamıza katılın ve ilk siparişinizde %25 indirim kazanın. Size özel indirim kodu anında e-posta adresinize gönderilecek!
+                        </p>
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <form asp-action="Index" asp-controller="Mail" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Ad</label>
+                                <input type="text"
+                                       class="form-control form-control-lg" name="Name" id="name" placeholder="Adınızı Giriniz">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Email</label>
+                                <input type="email" class="form-control form-control-lg" name="ReceiverMail" id="email" placeholder="E-posta Adresinizi Giriniz">
+                            </div>
+                           <br />
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-dark btn-lg">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
