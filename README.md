@@ -1,6 +1,9 @@
 🛒 FoodMart – E-Ticaret Projesi
 🔧 ASP.NET Core 8.0 & 🍃 MongoDB ile geliştirilen kapsamlı bir alışveriş platformu!
 
+📚 Bu proje, Murat Yücedağ hocamızın eğitmenliğinde geliştirilmiştir.
+Güncel teknolojilerle donatılmış, modern bir alışveriş sistemi sunar.
+
 🎯 Özellikler
 🛍️ Tüm Ürün ve Kategori Yönetimi
 
